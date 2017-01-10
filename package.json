@@ -1,0 +1,13 @@
+{
+  "name": "lib_socket",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "GhostxRipper <yann_ams@icloud.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^1.1.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

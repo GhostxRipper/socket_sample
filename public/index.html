@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta -->
+        <title>React Starter Kit</title>
+        <meta name="description" content="" />
+        <meta name="author" content="Amsellem Yann">
+        <meta name="viewport" content="height=device-height ,width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="Pragma" content="no-store">
+        <meta http-equiv="Cache-Control" content="no-store">
+        <meta http-equiv="Lang" content="en">
+        <meta name="copyright" content="All Rights Reserved - GhostxRipper">
+        <!-- if partials used -->
+        <!-- <meta name="fragment" content="!"> -->
+    <!-- meta -->
+
+    <!-- design -->
+        <!-- styles -->
+        <!-- styles -->
+        <!-- fonts -->
+        <!-- fonts -->
+    <!-- design -->
+
+</head>
+
+<body>
+
+    <!-- content -->
+    <div id="app">
+        <h2 id="title">
+            Test
+        </h2>
+        <section id="recuriveMessage">
+
+        </section>
+    </div>
+    <!-- content -->
+
+    <!-- scripts -->
+        <!-- libraries -->
+        <!-- libraries -->
+        <!-- features -->
+        <script type="text/javascript">
+        (function () {
+          var ws = new WebSocket('ws://127.0.0.1:3000')
+          var section = document.querySelector('#recuriveMessage')
+          ws.onmessage = function (event) {
+            var data = JSON.parse(event.data)
+            if (data.event === 'recuriveMessage') {
+              section.innerHTML += '<article>'+ data.data +'</article>'
+            }
+          }
+        })()
+        </script>
+        <!-- features -->
+    <!-- scripts -->
+
+</body>
+
+</html>
