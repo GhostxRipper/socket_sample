@@ -2,6 +2,8 @@ const { Server } = require('ws')
 const http = require('http')
 const fs = require('fs')
 
+console.log('🤘')
+
 const server = http.createServer((request, response) => {
   const index = fs.readFileSync('public/index.html')
   response.writeHead(200, {'Content-Type': 'text/html'})
